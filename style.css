@@ -128,6 +128,7 @@
 
 .footer-text {
   display: flex;
+  font-size: 12px;
   align-items: flex-start;
   margin-bottom: 20px;
   color: rgb(150, 150, 150);
@@ -136,8 +137,8 @@
 .footer-logos {
   display: flex;
   flex-direction: column;
-  margin-left: 45px;
-  justify-content: flex-start;
+  /* margin-left: 45px; */
+  justify-content: center;
   gap: 20px;
 }
 
@@ -202,12 +203,6 @@
     background-color: rgb(254, 223, 228);
   }
 
-  .footer-logos {
-    flex-direction: row;
-    justify-content: center;
-    gap: 60px;
-  }
-
   /* -------------Hover animation------------- */
   #hero-button::after,
   #hero-button::before {
@@ -232,4 +227,16 @@
   #hero-button:hover::before {
     transform: scaleX(1);
   }
+  /*-----------Footer-----------*/
+  .footer {
+    margin-top: 85px;
+  }
+  .footer-logos {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    margin-left: 20px;
+  }
+
 }
