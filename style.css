@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "roag-light";
+  src: url(font/Roag-Light.otf);
+}
+
+@font-face {
+  font-family: "roag-bold";
+  src: url(font/Roag-Bold.otf);
+}
+
+@font-face {
+  font-family: "roag-bold-italic";
+  src: url(font/Roag-ExtraBoldItalic.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roag-light";
+}
+
+.container {
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------------Hero---------------*/
+.hero {
+  position: relative;
+  color: #ffff;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-mb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 60vh;
+  background: url("img/bmw-r80-bobber.jpg") center/cover no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.hero-mb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.container .hero-container {
+  width: 80vh;
+}
+.hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: "roag-bold-italic";
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  max-width: 500px;
+}
+
+.price {
+  font-family: "roag-bold";
+}
+
+.hero-img {
+  display: none;
+  width: 100%;
+}
+
+.hero-bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+#hero-button {
+  display: inline-block;
+  text-align: justify;
+  font-size: 12px;
+  font-family: "roag-bold";
+  color: white;
+  width: 100px;
+  height: 23px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1px;
+  background-color: rgb(255, 2, 2);
+}
+
+.doodle #arrow {
+  width: 80px;
+}
+/*------------Footer------------*/
+.footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container .footer-title {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-text {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  color: rgb(150, 150, 150);
+}
+
+.footer-logos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45px;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.footer-logos .sm-lg {
+  width: 60px;
+  height: auto;
+}
+
+.footer-logos .bg-lg {
+  width: 120px;
+  height: auto;
+}
+
+@media (min-width: 782px) {
+  .hero {
+    min-height: auto;
+    color: black;
+  }
+
+  /* Remove background + overlay */
+  .hero-mb {
+    display: none;
+  }
+
+  /* Show image */
+  .hero-img {
+    display: block;
+    flex: 1;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  /* Side-by-side layout */
+  .hero-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  #hero-button {
+    color: rgb(255, 2, 2);
+    background-color: rgb(254, 223, 228);
+  }
+  .footer-logos {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+  }
+}
